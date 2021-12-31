@@ -1,0 +1,87 @@
+body {
+    margin: 0;
+    font-family: 'East Sea Dokdo';
+}
+
+a {
+    text-decoration: none;
+    color: aliceblue;
+}
+
+.navbar_logo {
+    font-size: 24px;
+    color: crimson !important;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: black;
+    padding: 8px 12px;
+}
+
+.navbar_menu {
+    display: flex;
+    list-style: none;
+    padding-left: 0;
+}
+
+.navbar_menu>li {
+    padding: 8px 5px;
+}
+
+.navbar_menu li:hover {
+    background-color: aquamarine;
+    border-radius: 4px;
+}
+
+.navbar_links {
+    color: white;
+    list-style: none;
+    display: flex;
+}
+
+.navbar_links i {
+    padding: 8px 12px;
+}
+
+.togglebutton {
+    display: none;
+    position: absolute;
+    right: 8px;
+    top: 16px;
+    color: crimson;
+}
+
+@media screen and (max-width: 550px) {
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 8px 24px;
+    }
+    .navbar_menu {
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+    .navbar_menu li {
+        width: 100%;
+        text-align: center;
+    }
+    .navbar_links {
+        display: none;
+        align-items: center;
+        /* width: 100%; */
+        padding: 0;
+        margin: 0 auto;
+    }
+    .togglebutton {
+        display: block;
+    }
+    .navbar_menu.active,
+    .navbar_links.active {
+        display: flex;
+    }
+}
